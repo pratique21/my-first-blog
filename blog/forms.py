@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Comment
 
 # django provides the basic form structure and we create a PostForm object
 # that uses a specific type of form called ModelForm
@@ -10,3 +10,8 @@ class PostForm(forms.ModelForm):
         # Later on, we can access the Post.title and Post.text in the html for displaying purposes
         model = Post
         fields = ('title','text',)
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('author','text')
