@@ -13,8 +13,8 @@
             <div class="container">
                 {% if user.is_authenticated %}
                     {% if perms.auth.change_post %}
-                    <a href="{% url 'post_new' %}" class="top-menu"><span class="bi bi-pencil"></span></a>
-                    <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+                    <a href="{% url 'post_new' %}" class="top-menu"><span class="bi bi-plus-square"></span></a>
+                    <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="bi bi-pencil"></span></a>
                     {% endif %}
                 <h3 class="top-menu">Hello {{ user.username }} ! <small><a class="btn btn-default" href="{% url 'logout' %}">Log-Out</a></small></h3>
                 {% else %}

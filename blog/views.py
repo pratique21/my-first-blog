@@ -16,7 +16,7 @@ def post_list(request):
     #posts = Post.objects.order_by('-published_date')
 
     # This one will only show those entries which have a published time associated with them
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
 
     # request is the address that the user types in. To this we append the name in second argument and the last part
     # says what the contents are, in this case, multiple posts or list of posts.
